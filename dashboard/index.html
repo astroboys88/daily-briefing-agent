@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Briefing Agent — Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .card { backdrop-filter: blur(10px); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); }
+    .glow { box-shadow: 0 0 40px rgba(102,126,234,0.3); }
+    .animate-float { animation: float 3s ease-in-out infinite; }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    .pulse-dot { animation: pulse 2s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
+  </style>
+</head>
+<body class="bg-gray-950 text-white min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full z-50 bg-gray-950/80 backdrop-blur-lg border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+          <i class="ph ph-robot text-xl text-white"></i>
+        </div>
+        <div>
+          <div class="font-bold text-lg">Daily Briefing Agent</div>
+          <div class="text-xs text-gray-400">AI-powered • Telegram Bot</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://github.com/astroboys88/daily-briefing-agent" target="_blank" class="text-gray-400 hover:text-white transition">
+          <i class="ph ph-github-logo text-2xl"></i>
+        </a>
+        <div class="flex items-center gap-2 bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm">
+          <div class="w-2 h-2 rounded-full bg-green-400 pulse-dot"></div>
+          Live
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pt-32 pb-20 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-400 px-4 py-2 rounded-full text-sm mb-6">
+        <i class="ph ph-star text-yellow-400"></i>
+        Xiaomi MiMo 100T Creator Incentive Program
+      </div>
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-6">
+        <span class="gradient-text">AI Agent</span><br>untuk kehidupan sehari-hari
+      </h1>
+      <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-10">
+        Bot Telegram yang mengirim brief harian — cuaca, berita, agenda, dan motivasi — setiap pagi jam 08:00 secara otomatis.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="https://github.com/astroboys88/daily-briefing-agent" target="_blank" class="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl font-semibold hover:opacity-90 transition flex items-center gap-2">
+          <i class="ph ph-github-logo text-xl"></i> View on GitHub
+        </a>
+        <a href="https://platform.xiaomimimo.com" target="_blank" class="px-8 py-4 bg-white/10 border border-white/20 rounded-xl font-semibold hover:bg-white/20 transition flex items-center gap-2">
+          <i class="ph ph-lightning text-yellow-400"></i> Powered by MiMo API
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-12 px-6">
+    <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="card rounded-2xl p-6 text-center animate-float" style="animation-delay:0s">
+        <div class="text-4xl font-extrabold gradient-text mb-2">16</div>
+        <div class="text-gray-400 text-sm">Files</div>
+      </div>
+      <div class="card rounded-2xl p-6 text-center animate-float" style="animation-delay:0.2s">
+        <div class="text-4xl font-extrabold gradient-text mb-2">1</div>
+        <div class="text-gray-400 text-sm">Commit</div>
+      </div>
+      <div class="card rounded-2xl p-6 text-center animate-float" style="animation-delay:0.4s">
+        <div class="text-4xl font-extrabold gradient-text mb-2">8</div>
+        <div class="text-gray-400 text-sm">Commands</div>
+      </div>
+      <div class="card rounded-2xl p-6 text-center animate-float" style="animation-delay:0.6s">
+        <div class="text-4xl font-extrabold gradient-text mb-2">5</div>
+        <div class="text-gray-400 text-sm">Services</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-16">Apa yang Agent Ini Lakukan</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="card rounded-2xl p-8 hover:border-indigo-500/50 transition">
+          <div class="w-14 h-14 rounded-2xl bg-blue-500/20 flex items-center justify-center mb-6">
+            <i class="ph ph-cloud-sun text-3xl text-blue-400"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Cuaca Harian</h3>
+          <p class="text-gray-400">Data cuaca real-time dari OpenWeatherMap dengan forecast harian.知道你那边的天气情况。</p>
+        </div>
+
+        <div class="card rounded-2xl p-8 hover:border-indigo-500/50 transition">
+          <div class="w-14 h-14 rounded-2xl bg-red-500/20 flex items-center justify-center mb-6">
+            <i class="ph ph-newspaper text-3xl text-red-400"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Berita Teratas</h3>
+          <p class="text-gray-400">Top 5 berita harian dari NewsAPI berdasarkan kategori yang kamu pilih.</p>
+        </div>
+
+        <div class="card rounded-2xl p-8 hover:border-indigo-500/50 transition">
+          <div class="w-14 h-14 rounded-2xl bg-green-500/20 flex items-center justify-center mb-6">
+            <i class="ph ph-list-checks text-3xl text-green-400"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Agenda Harian</h3>
+          <p class="text-gray-400">Kelola tugas harian via Telegram. Add, complete, dan track semua dari chat.</p>
+        </div>
+
+        <div class="card rounded-2xl p-8 hover:border-indigo-500/50 transition">
+          <div class="w-14 h-14 rounded-2xl bg-purple-500/20 flex items-center justify-center mb-6">
+            <i class="ph ph-sparkle text-3xl text-purple-400"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">AI Motivation</h3>
+          <p class="text-gray-400">Generated daily quote pakai Xiaomi MiMo API. Inspiratif, bermakna, dalam Bahasa Indonesia.</p>
+        </div>
+
+        <div class="card rounded-2xl p-8 hover:border-indigo-500/50 transition">
+          <div class="w-14 h-14 rounded-2xl bg-yellow-500/20 flex items-center justify-center mb-6">
+            <i class="ph ph-robot text-3xl text-yellow-400"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Brief Otomatis</h3>
+          <p class="text-gray-400">Setiap pagi jam 08:00, AI composing brief lengkap dari semua data, dikirim langsung ke Telegram.</p>
+        </div>
+
+        <div class="card rounded-2xl p-8 hover:border-indigo-500/50 transition">
+          <div class="w-14 h-14 rounded-2xl bg-pink-500/20 flex items-center justify-center mb-6">
+            <i class="ph ph-clock text-3xl text-pink-400"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">On-Demand</h3>
+          <p class="text-gray-400">Mau dapat briefing sekarang? Ketik /now. Gak perlu nunggu pagi.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture -->
+  <section class="py-20 px-6 bg-gray-900/50">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-4">Architecture</h2>
+      <p class="text-gray-400 text-center mb-12">Tech stack yang digunakan</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="card rounded-xl p-4 text-center">
+          <div class="text-3xl mb-2">🤖</div>
+          <div class="font-semibold">grammY</div>
+          <div class="text-xs text-gray-500">Telegram Bot</div>
+        </div>
+        <div class="card rounded-xl p-4 text-center">
+          <div class="text-3xl mb-2">⚡</div>
+          <div class="font-semibold">MiMo API</div>
+          <div class="text-xs text-gray-500">AI Inference</div>
+        </div>
+        <div class="card rounded-xl p-4 text-center">
+          <div class="text-3xl mb-2">🌦️</div>
+          <div class="font-semibold">OpenWeather</div>
+          <div class="text-xs text-gray-500">Weather Data</div>
+        </div>
+        <div class="card rounded-xl p-4 text-center">
+          <div class="text-3xl mb-2">📰</div>
+          <div class="font-semibold">NewsAPI</div>
+          <div class="text-xs text-gray-500">News Feed</div>
+        </div>
+        <div class="card rounded-xl p-4 text-center">
+          <div class="text-3xl mb-2">⏰</div>
+          <div class="font-semibold">node-cron</div>
+          <div class="text-xs text-gray-500">Scheduler</div>
+        </div>
+        <div class="card rounded-xl p-4 text-center">
+          <div class="text-3xl mb-2">🚀</div>
+          <div class="font-semibold">PM2</div>
+          <div class="text-xs text-gray-500">Process Manager</div>
+        </div>
+        <div class="card rounded-xl p-4 text-center">
+          <div class="text-3xl mb-2">🟢</div>
+          <div class="font-semibold">Node.js</div>
+          <div class="text-xs text-gray-500">Runtime</div>
+        </div>
+        <div class="card rounded-xl p-4 text-center">
+          <div class="text-3xl mb-2">🐧</div>
+          <div class="font-semibold">Ubuntu</div>
+          <div class="text-xs text-gray-500">Server OS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Commands Table -->
+  <section class="py-20 px-6">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">Bot Commands</h2>
+      <div class="card rounded-2xl overflow-hidden">
+        <table class="w-full">
+          <thead class="bg-white/5">
+            <tr>
+              <th class="text-left px-6 py-4 text-gray-400 font-medium">Command</th>
+              <th class="text-left px-6 py-4 text-gray-400 font-medium">Description</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/5">
+            <tr><td class="px-6 py-4 font-mono text-indigo-400">/start</td><td class="px-6 py-4 text-gray-300">Aktifkan daily briefing</td></tr>
+            <tr><td class="px-6 py-4 font-mono text-indigo-400">/now</td><td class="px-6 py-4 text-gray-300">Dapat briefing sekarang</td></tr>
+            <tr><td class="px-6 py-4 font-mono text-indigo-400">/weather</td><td class="px-6 py-4 text-gray-300">Cuaca saat ini</td></tr>
+            <tr><td class="px-6 py-4 font-mono text-indigo-400">/news</td><td class="px-6 py-4 text-gray-300">Berita terkini</td></tr>
+            <tr><td class="px-6 py-4 font-mono text-indigo-400">/quote</td><td class="px-6 py-4 text-gray-300">Motivasi harian AI</td></tr>
+            <tr><td class="px-6 py-4 font-mono text-indigo-400">/agenda</td><td class="px-6 py-4 text-gray-300">Tugas hari ini</td></tr>
+            <tr><td class="px-6 py-4 font-mono text-indigo-400">/add</td><td class="px-6 py-4 text-gray-300">Tambah tugas</td></tr>
+            <tr><td class="px-6 py-4 font-mono text-indigo-400">/done</td><td class="px-6 py-4 text-gray-300">Tandai selesai</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 py-12 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+          <i class="ph ph-robot text-sm text-white"></i>
+        </div>
+        <span class="text-gray-400 text-sm">Daily Briefing Agent • Built with Astro 🔥</span>
+      </div>
+      <div class="flex items-center gap-4 text-gray-500 text-sm">
+        <a href="https://github.com/astroboys88/daily-briefing-agent" target="_blank" class="hover:text-white transition">GitHub</a>
+        <a href="https://platform.xiaomimimo.com" target="_blank" class="hover:text-white transition">MiMo API</a>
+        <a href="https://mimo.xiaomimimo.com" target="_blank" class="hover:text-white transition">MiMo 100T</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
