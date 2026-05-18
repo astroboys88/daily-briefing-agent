@@ -1,0 +1,32 @@
+{
+  "name": "daily-briefing-agent",
+  "version": "1.0.0",
+  "description": "AI-powered daily briefing agent — weather, news, task reminders via Telegram",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node src/bot.js",
+    "start": "node src/bot.js",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:stop": "pm2 stop daily-briefing-agent"
+  },
+  "keywords": [
+    "telegram-bot",
+    "ai-agent",
+    "daily-briefing",
+    "weather",
+    "news",
+    "grammy"
+  ],
+  "author": "astroboys88",
+  "license": "MIT",
+  "dependencies": {
+    "grammy": "^1.30.0",
+    "node-cron": "^3.0.3",
+    "dotenv": "^16.4.5",
+    "axios": "^1.7.7"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
